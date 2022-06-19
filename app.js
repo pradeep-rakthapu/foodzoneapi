@@ -7,7 +7,7 @@ const MongoClient = mongo.MongoClient;
 const dotenv = require('dotenv');
 dotenv.config();
 let port = process.env.Port||8230;
-const mongourl = process.env.mongoliveurl;
+const mongourl = "mongodb+srv://pradeepgoud:WhA7fwepxC7zOoDk@cluster0.tojfe.mongodb.net/hotstar?retryWrites=true&w=majority";
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
