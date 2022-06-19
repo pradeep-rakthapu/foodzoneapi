@@ -6,7 +6,7 @@ const mongo = require('mongodb');
 const MongoClient = mongo.MongoClient;
 const dotenv = require('dotenv');
 dotenv.config();
-let port = process.env.Port||1230;
+let port = process.env.PORT ||1230;
 const mongourl = "mongodb+srv://pradeepgoud:WhA7fwepxC7zOoDk@cluster0.tojfe.mongodb.net/hotstar?retryWrites=true&w=majority";
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -167,7 +167,7 @@ app.put('/updateorders/:id',(req,res)=>{
 MongoClient.connect(mongourl,(err,client)=>{
     if(err) console.log("error while connecting");
       db = client.db('foodzone');
-      app.listen(port,()=>{
+      app.listen(process.env.PORT || 5000,()=>{
           console.log(`server is running on port ${port}` )
       })
 
