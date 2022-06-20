@@ -1,0 +1,21 @@
+List of city : https://foodzone1.herokuapp.com/location
+
+
+List of Restaurants: https://foodzone1.herokuapp.com/restaurants
+
+mealtype : https://foodzone1.herokuapp.com/mealtype
+
+restaurants with state:https://foodzone1.herokuapp.com/restaurants?state_id=1
+
+restaurants with mealid : https://foodzone1.herokuapp.com/restaurants?meal_id=2
+
+filter with cusine id :https://foodzone1.herokuapp.com/filters/1?cuisineid=2
+
+filter with lcost& hcost : https://foodzone1.herokuapp.com/filters/1?cuisineid=2&lcost=300&hcost=5000
+
+sort : https://foodzone1.herokuapp.com/filters/1?lcost=300&hcost=5000&sort=-1
+
+menu on basis of restaurant : https://foodzone1.herokuapp.com/menu?restId=2
+
+details restaurant : https://foodzone1.herokuapp.com/details/62a1a2b0ef49d259f499d5ea
+

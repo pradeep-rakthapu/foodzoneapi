@@ -7,7 +7,7 @@ const MongoClient = mongo.MongoClient;
 const dotenv = require('dotenv');
 dotenv.config();
 let port = process.env.PORT ||1230;
-const mongourl = "mongodb+srv://pradeepgoud:WhA7fwepxC7zOoDk@cluster0.tojfe.mongodb.net/hotstar?retryWrites=true&w=majority";
+const mongourl = "mongodb+srv://pradeepgoud:qVCrPh8XVbIq1bkz@cluster0.tojfe.mongodb.net/?retryWrites=true&w=majority";
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
@@ -90,7 +90,7 @@ app.get('/filters/:mealid',(req,res)=>{
 })
 //
 app.get('/details/:id',(req,res)=>{
-        let restid = mongo.ObjectId(req.params.id)
+        let restid = Number(req.params.id)
         db.collection('restaurantdata').find({_id:restid}).toArray((err,result)=>{
             if(err) throw err;
             res.send(result);
