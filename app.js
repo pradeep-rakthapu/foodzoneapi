@@ -101,7 +101,7 @@ app.get('/details/:id',(req,res)=>{
 //menu
 app.get('/menu',(req,res) => {
     let query = {}
-    let restId = (req.query.restId)
+    let restId = Number(req.query.restId)
     if(restId){
         query = {restaurant_id:restId}
     }
