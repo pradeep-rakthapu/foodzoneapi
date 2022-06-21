@@ -90,7 +90,7 @@ app.get('/filters/:mealid',(req,res)=>{
 })
 //
 app.get('/details/:id',(req,res)=>{
-        let restid = mongo.ObjectId(req.params.id)
+        let restid = Number(req.params.id)
         db.collection('restaurantdata').find({_id:restid}).toArray((err,result)=>{
             if(err) throw err;
             res.send(result);
