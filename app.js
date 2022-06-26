@@ -130,12 +130,17 @@ app.post('/placeorder/',(req,res)=>{
     })
 })
 // view order
-app.get('/vieworders/',(req,res)=>{
-       db.collection('orders').find().toArray((err,result)=>{
+app.get('/vieworders',(req,res)=>{
+        let query = {}
+        if(req.query.email){
+            query ={ "email" : req.query.email}
+        }
+       db.collection('orders').find(query).toArray((err,result)=>{
            if(err) throw err;
            res.send(result);
        })
 })
+
 
 // delete orders
 app.delete('/deleteorders',(req,res)=>{
